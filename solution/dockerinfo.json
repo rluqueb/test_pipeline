@@ -1,0 +1,1 @@
+{"docker_info_list": [{"container_name": "test-databroker1", "ip_address": "test-databroker1", "port": 30002}, {"container_name": "test-model1", "ip_address": "test-model1", "port": 30000}, {"container_name": "orchestrator", "ip_address": "orchestrator", "port": 30004}]}

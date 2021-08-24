@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: test-databroker1
+  name: test-databroker1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-databroker1
+  template:
+    metadata:
+      labels:
+        app: test-databroker1
+    spec:
+      containers:
+      - image: hub.docker.com/rafluq/test_databroker:v3
+        imagePullPolicy: Always
+        name: test-databroker1
+        ports:
+        - containerPort: 8061
+          name: protobuf-api
+        - containerPort: 8062
+          name: webui
+      imagePullSecrets:
+      - name: acumos-registry

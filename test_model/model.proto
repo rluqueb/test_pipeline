@@ -1,0 +1,12 @@
+//Define the used version of proto
+syntax = "proto3";
+
+//Define a message 
+message Messag {
+    string msg     = 1 ;
+}
+
+//Define the service
+service Copy {
+    rpc copy_message(Messag) returns (Messag);
+}

@@ -1,0 +1,12 @@
+syntax = 'proto3';
+
+message Messag {
+    string msg     = 1 ;
+}
+
+message Empty {
+}
+
+service get_next_row {
+    rpc get_next_row(Empty) returns(Messag);
+}
